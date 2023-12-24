@@ -1,0 +1,27 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+    font-family: 'mariburi';
+    font-weight: normal;
+    src: url("../public/font/MaruBuri-Regular.ttf");
+}
+
+@font-face {
+    font-family: 'rocky';
+    font-weight: normal;
+    src: url("../public/font/Rockybilly.ttf");
+}
+
+html,
+body {
+    padding: 0;
+    margin: 0;
+    line-height: 1.6;
+    font-size: 18px;
+    color: white;
+    background-color: #0c1212;
+    font-family: mariburi, serif;
+}.normal{font-weight: normal}
+ .bold{font-weight: bold}
