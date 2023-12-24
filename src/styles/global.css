@@ -5,13 +5,25 @@
 @font-face {
     font-family: 'mariburi';
     font-weight: normal;
-    src: url("../public/font/MaruBuri-Regular.ttf");
+    src: url("../public/font/MaruBuri-Regular.ttf") format("truetype");
 }
 
 @font-face {
     font-family: 'rocky';
     font-weight: normal;
-    src: url("../public/font/Rockybilly.ttf");
+    src: url("../public/font/Rockybilly.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: 'D2Coding';
+    font-weight: normal;
+    src: url("../public/font/D2Coding_Normal.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: 'D2Coding';
+    font-weight: bold;
+    src: url("../public/font/D2Coding_Bold.ttf") format("truetype");
 }
 
 html,
@@ -22,6 +34,6 @@ body {
     font-size: 18px;
     color: white;
     background-color: #0c1212;
-    font-family: mariburi, serif;
+    font-family: D2Coding, serif;
 }.normal{font-weight: normal}
  .bold{font-weight: bold}

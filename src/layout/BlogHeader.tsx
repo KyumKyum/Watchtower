@@ -11,6 +11,7 @@ export default function BlogHeader(): ReactElement {
                 <ul className="flex list-none">
                     <li className="text-xl p-6">Profile</li>
                     <li className="text-xl p-6">Posts</li>
+                    <li className="text-xl p-6">Guestbook</li>
                     <li className="text-xl p-6">Contact</li>
                 </ul>
             </div>

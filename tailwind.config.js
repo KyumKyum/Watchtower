@@ -7,7 +7,8 @@ module.exports = {
     extend: {
       fontFamily: {
         mariburi: "mariburi",
-        rocky: "rocky"
+        rocky: "rocky",
+        D2Coding: "D2Coding"
       }
     },
   },
