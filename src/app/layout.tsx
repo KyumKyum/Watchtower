@@ -15,6 +15,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="ko">
+    <head>
+        <base href={"http://localhost:3000/"}/>
+      <title>{'Kyum\'s Watchtower'}</title>
+    </head>
       <body>
         {children}
       </body>
