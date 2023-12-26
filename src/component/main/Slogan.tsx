@@ -1,4 +1,3 @@
-import 'animate.css'
 import {ReactElement} from "react";
 
 export default function Slogan(): ReactElement{

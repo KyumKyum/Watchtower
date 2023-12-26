@@ -1,4 +1,5 @@
 import '../styles/global.css'
+import 'animate.css'
 import localFont from 'next/font/local'
 
 //* Same with _app.js in previous Next.js
