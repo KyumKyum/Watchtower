@@ -11,7 +11,7 @@ interface BadgeProps {
 export default function Badge({icon:Icon, name, href}: BadgeProps):ReactElement {
     return (
         <div className={"flex flex-row mx-5"}>
-            <Icon stroke={"white"} fill={"white"} />
+            <Icon className={"stroke-white fill-white"} />
             <Link href={href} className={"mx-2"} rel={"noopener noreferrer"} target={"_blank"}>{name}</Link>
         </div>
     )
