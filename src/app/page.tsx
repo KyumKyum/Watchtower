@@ -6,9 +6,7 @@ import MainContainer from "@/containers/main/MainContainer";
 
 const Home = (): ReactElement => {
   return (
-    <Canvas>
-        <MainContainer />
-    </Canvas>
+      <MainContainer />
   )
 }
 

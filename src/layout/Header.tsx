@@ -10,7 +10,7 @@ export default function Header(): ReactElement {
                 </div>
                 <div className={"flex items-center"}>
                     <ul className="flex list-none">
-                        <li className="text-xl p-6">Profile</li>
+                        <Link href={"/profile"} className="text-xl p-6">Profile</Link>
                         <li className="text-xl p-6">Posts</li>
                         <li className="text-xl p-6">Guestbook</li>
                         <li className="text-xl p-6">Contact</li>
