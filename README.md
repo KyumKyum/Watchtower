@@ -6,4 +6,5 @@
 포트폴리오 사이트이자 블로그처럼 개발 관련 글도 올릴 수 있고, 내 입맛대로 디자인도 할 수 있는 그런 나에게 너무나도 자유로운 공간. 까짓거, 만들어보자.
 
 ##### Tech Stack: A Typescript-based One-App Next.js Blog
-- Next.js, Tailwind CSS, Animate.css, Prisma (Postgresql DB) 
+- Next.js, Tailwind CSS, Prisma (Postgresql DB) 
+- Animate.css, GSAP
