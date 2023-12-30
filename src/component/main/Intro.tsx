@@ -9,7 +9,7 @@ export default function Intro(): ReactElement {
             <div className={"flex flex-row w-2/6 items-center content-center justify-center"}>
                 <Image className="object-contain w-5/6 h-5/6" src={MainImage} alt={'main'}/>
             </div>
-            <div className={"flex flex-col w-4/6 items-end"}>
+            <div className={"flex flex-col w-4/6 items-end space-y-4"}>
                 <p className={'text-6xl font-bold'}>{'Lim Kyu Min (Jay Lim)'}</p>
                 <p className={'text-xl'}>{'A Full-Stack Web/App Developer specialized in BE & FE development.'}</p>
                 <p className={'text-lg mt-3 text-end'}>{'안녕하세요!'}

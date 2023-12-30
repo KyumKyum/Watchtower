@@ -6,14 +6,15 @@ import ScrollAnimFadeInOutWrapper from "@/wrapper/ScrollAnimFadeInOutWrapper";
 import DeveloperIntro from "@/component/profile/DeveloperIntro";
 import FEIntro from "@/component/profile/FEIntro";
 import TechStack from "@/component/profile/TechStack";
+import Portfolio from "@/component/profile/Portfolio";
 
 const ProfileContainer: React.FC = (): ReactElement => {
 
-    return (
+    return ( //* Fast Render for Portfolio!
         <div className={"flex flex-col items-center w-full h-full"}>
             <div className={"w-3/4 space-y-20"}>
-                {[Greeting, Introduction, DeveloperIntro, TechStack ,FEIntro].map((Component, index) => (
-                    <ScrollAnimFadeInOutWrapper key={index}>
+                {[Greeting, Introduction, DeveloperIntro, Portfolio, TechStack ,FEIntro].map((Component, index) => (
+                    <ScrollAnimFadeInOutWrapper key={index} fastRender={Component === Portfolio}>
                         <Component />
                     </ScrollAnimFadeInOutWrapper>
                 ))}

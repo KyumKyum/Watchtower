@@ -3,7 +3,12 @@
 import React, {ReactElement, useEffect, useRef, useState} from "react";
 import {cls} from "@/logic/utils";
 
-export default function ScrollAnimFadeInOutWrapper({children}:{children:React.ReactNode}): ReactElement {
+interface ScrollAnimFadeInOutWrapperProps {
+    children: React.ReactNode,
+    fastRender: boolean
+}
+
+export default function ScrollAnimFadeInOutWrapper({children, fastRender}:ScrollAnimFadeInOutWrapperProps): ReactElement {
     const divRef = useRef<HTMLDivElement | null>(null);
     const [viewed, setViewed] = useState(false);
 
@@ -17,7 +22,7 @@ export default function ScrollAnimFadeInOutWrapper({children}:{children:React.Re
             {
                 root: null,
                 rootMargin: '0px',
-                threshold: 0.5,
+                threshold: fastRender ? 0.2 : 0.5,
             }
         );
 

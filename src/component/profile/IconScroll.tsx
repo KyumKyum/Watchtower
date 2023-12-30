@@ -22,7 +22,11 @@ import GRPC from '../../public/svg/grpc.svg'
 import GQL from '../../public/svg/graphql.svg'
 import {cls} from "@/logic/utils";
 
-const IconScroll: React.FC = ({animate}:string):ReactElement => {
+interface IconScrollProps {
+    animate: string
+}
+
+const IconScroll: React.FC<IconScrollProps> = ({animate}:IconScrollProps):ReactElement => {
     return (
         <div className={"flex flex-col items-center w-24 h-80 overflow-hidden whitespace-nowrap"}>
             <div className={cls("flex flex-col items-center whitespace-nowrap space-y-5 ", animate)}>

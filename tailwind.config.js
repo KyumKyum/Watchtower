@@ -8,7 +8,8 @@ module.exports = {
       fontFamily: {
         mariburi: "mariburi",
         rocky: "rocky",
-        D2Coding: "D2Coding"
+        D2Coding: "D2Coding",
+        Pretendard: "Pretendard"
       }
     },
   },
