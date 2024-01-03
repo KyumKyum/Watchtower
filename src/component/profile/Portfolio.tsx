@@ -20,9 +20,7 @@ const Portfolio:React.FC = (): ReactElement => {
             </div>
             <div className={"flex flex-col w-5/6 space-y-16"}>
                 {[PartialPortfolio_1, PartialPortfolio_2].map((Component, index) => (
-                    <ScrollAnimFadeInOutWrapper key={index} fastRender={true}>
-                        <Component />
-                    </ScrollAnimFadeInOutWrapper>
+                    <Component key={index} />
                 ))}
             </div>
         </div>

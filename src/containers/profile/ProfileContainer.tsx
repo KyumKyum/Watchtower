@@ -14,9 +14,12 @@ const ProfileContainer: React.FC = (): ReactElement => {
         <div className={"flex flex-col items-center w-full h-full"}>
             <div className={"w-3/4 space-y-20"}>
                 {[Greeting, Introduction, DeveloperIntro, Portfolio, TechStack ,FEIntro].map((Component, index) => (
-                    <ScrollAnimFadeInOutWrapper key={index} fastRender={Component === Portfolio}>
-                        <Component />
-                    </ScrollAnimFadeInOutWrapper>
+                    Component === Portfolio ? (
+                        <Component key={index}/>
+                    ) : (
+                        <ScrollAnimFadeInOutWrapper key={index} fastRender={false}>
+                            <Component />
+                    </ScrollAnimFadeInOutWrapper>)
                 ))}
             </div>
         </div>

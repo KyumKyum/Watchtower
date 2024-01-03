@@ -5,7 +5,7 @@ import ScrollAnimFadeInOutWrapper from "@/wrapper/ScrollAnimFadeInOutWrapper";
 
 const PartialPortfolio_1: React.FC = (): ReactElement => {
     return (
-        <div className={"flex flex-col justify-center items-center w-full space-y-10"}>
+        <div className={"flex flex-col justify-center items-stretch w-full space-y-2"}>
             <ScrollAnimFadeInOutWrapper fastRender={true}>
                 <div className={"flex flex-col justify-center items-center w-full space-y-4"}>
                     <p className={'text-4xl font-bold'}>{'2019: 병아리 개발자'}</p>
