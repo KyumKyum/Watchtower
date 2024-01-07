@@ -1,27 +1,36 @@
-import React, {ReactElement} from "react";
-import Greeting from "@/component/profile/Greeting";
-import Introduction from "@/component/profile/Introduction";
-import DeveloperIntro from "@/component/profile/DeveloperIntro";
-import TechStack from "@/component/profile/TechStack";
-import FEIntro from "@/component/profile/FEIntro";
-import ScrollAnimFadeInOutWrapper from "@/wrapper/ScrollAnimFadeInOutWrapper";
-import PartialPortfolio_1 from "@/component/profile/PartialPortfolio_1";
-import PartialPortfolio_2 from "@/component/profile/PartialPortfolio_2";
+'use client'
+
+import React, {JSX, ReactElement, useEffect, useRef, useState} from "react";
+import ProjectSpecific from "@/component/profile/ProjectSpecific";
+import PortfolioIntro from "@/component/profile/PortfolioIntro";
+import ActivitySpecific from "@/component/profile/ActivitySpecific";
+
+const loop = Array.from({ length: 7 }, (_, index) => (
+    <p key={index} className={'flex text-7xl my-14 font-D2Coding'} style={{ display: 'inline-block', writingMode: 'vertical-rl' }}>
+        {'P O R T F O L I O'}
+    </p>
+));
 
 const Portfolio:React.FC = (): ReactElement => {
+    const [portfolioHeight, setPortfolioHeight] = useState<undefined|number>(undefined);
+    const portfolioDivRef:React.MutableRefObject<null|HTMLDivElement> = useRef(null);
+
+    useEffect(() => {
+        setPortfolioHeight(portfolioDivRef.current?.getBoundingClientRect().height);
+    },[])
     return (
         <div className={"flex flex-row w-full"}>
-            <div className={"flex flex-col items-center w-1/6 overflow-hidden"}>
-                <div className={"flex flex-col w-full items-center animate-scroll"}>
-                    <p className={'flex text-7xl my-14 font-D2Coding'} style={{display:'inline-block', writingMode:'vertical-rl'}}>{'P O R T F O L I O'}</p>
-                    <p className={'flex text-7xl my-14 font-D2Coding'} style={{display:'inline-block', writingMode:'vertical-rl'}}>{'P O R T F O L I O'}</p>
-                    <p className={'flex text-7xl my-14 font-D2Coding'} style={{display:'inline-block', writingMode:'vertical-rl'}}>{'P O R T F O L I O'}</p>
+            {portfolioHeight != undefined &&
+                <div className={"flex flex-col w-1/6 overflow-hidden"} style={{height: portfolioHeight}}>
+                    <div className={"flex flex-col w-full items-center animate-scroll"}>
+                        {loop}
+                    </div>
                 </div>
-            </div>
-            <div className={"flex flex-col w-5/6 space-y-16"}>
-                {[PartialPortfolio_1, PartialPortfolio_2].map((Component, index) => (
-                    <Component key={index} />
-                ))}
+            }
+            <div ref={portfolioDivRef} className={"flex flex-col w-5/6 h-min space-y-16"}>
+                <PortfolioIntro/>
+                <ProjectSpecific/>
+                <ActivitySpecific/>
             </div>
         </div>
     )

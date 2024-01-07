@@ -1,5 +1,5 @@
 import {ReactElement} from "react";
-import Jump from '../../public/images/jump.png'
+import Jump from '../../public/images/jump.webp'
 import Image from "next/image";
 import Badge from "@/component/profile/Badge";
 

@@ -1,6 +1,6 @@
 import React, {ReactElement} from "react";
 import Link from "next/link";
-import MainImage from "@/public/images/photo.png";
+import MainImage from "@/public/images/photo.webp";
 import Image from "next/image";
 
 export default function Intro(): ReactElement {
