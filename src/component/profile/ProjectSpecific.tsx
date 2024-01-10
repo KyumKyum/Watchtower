@@ -1,16 +1,16 @@
 import React, {ReactElement} from "react";
 import Image from "next/image";
-import Character from "@/public/images/character.webp";
+import Character from "../../../public/images/character.webp";
 import ScrollAnimFadeInOutWrapper from "@/wrapper/ScrollAnimFadeInOutWrapper";
 import Link from "next/link";
-import Logo from "@/public/images/honsool_logo.webp";
-import Applogo from "@/public/images/Applogo.webp"
-import Mohey from "@/public/images/Mohey.webp";
-import M_app from "@/public/images/M_App.webp";
-import Neosk from "@/public/images/Neosk.webp";
-import Holme from "@/public/images/holme.webp";
-import LG from "@/public/images/lg.webp";
-import SKT from "@/public/images/skt.webp"
+import Logo from "../../../public/images/honsool_logo.webp";
+import Applogo from "../../../public/images/Applogo.webp"
+import Mohey from "../../../public/images/Mohey.webp";
+import M_app from "../../../public/images/M_App.webp";
+import Neosk from "../../../public/images/Neosk.webp";
+import Holme from "../../../public/images/holme.webp";
+import LG from "../../../public/images/lg.webp";
+import SKT from "../../../public/images/skt.webp"
 
 
 const ProjectSpecific: React.FC = (): ReactElement => {

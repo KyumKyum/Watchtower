@@ -1,7 +1,8 @@
 import React, {ReactElement} from "react";
 import Link from "next/link";
-import MainImage from "@/public/images/photo.webp";
+import MainImage from "../../../public/images/photo.webp";
 import Image from "next/image";
+import {getURL} from "@/logic/utils";
 
 export default function Intro(): ReactElement {
     return (
@@ -16,7 +17,7 @@ export default function Intro(): ReactElement {
                     <br/>{'풀스택 개발자로 활동하고 있는 임규민입니다.'}
                     <br/>{'프론트 개발과 백엔드 서버 / 마이크로 서비스 개발을 전문적으로 하고,'}
                     <br/>{'새로운 기술과 프레임워크, 언어에 대해 학습하는 것을 즐깁니다.'}
-                    <br/>{'만약 저에 대해 더 궁금하시다면, 제 '}<Link className={"text-cyan-600"} href={"/profile"}>{'프로필'}</Link> {'에서 더 알아가실 수 있습니다!'}
+                    <br/>{'만약 저에 대해 더 궁금하시다면, 제 '}<Link className={"text-cyan-600"} href={getURL("/profile")}>{'프로필'}</Link> {'에서 더 알아가실 수 있습니다!'}
                     <br/><br/>{'어떤 방법으로든 이 사이트에 오신 여러분들이 좋은 하루를 보낼 수 있기를 :)'}
                 </p>
             </div>

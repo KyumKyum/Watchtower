@@ -5,37 +5,37 @@
 @font-face {
     font-family: 'mariburi';
     font-weight: normal;
-    src: url("../public/font/MaruBuri-Regular.ttf") format("truetype");
+    src: url("../../public/font/MaruBuri-Regular.ttf") format("truetype");
 }
 
 @font-face {
     font-family: 'rocky';
     font-weight: normal;
-    src: url("../public/font/Rockybilly.ttf") format("truetype");
+    src: url("../../public/font/Rockybilly.ttf") format("truetype");
 }
 
 @font-face {
     font-family: 'D2Coding';
     font-weight: normal;
-    src: url("../public/font/D2Coding_Normal.ttf") format("truetype");
+    src: url("../../public/font/D2Coding_Normal.ttf") format("truetype");
 }
 
 @font-face {
     font-family: 'D2Coding';
     font-weight: bold;
-    src: url("../public/font/D2Coding_Bold.ttf") format("truetype");
+    src: url("../../public/font/D2Coding_Bold.ttf") format("truetype");
 }
 
 @font-face {
     font-family: 'Pretendard';
     font-weight: normal;
-    src: url("../public/font/Pretendard_Regular.otf") format('opentype');
+    src: url("../../public/font/Pretendard_Regular.otf") format('opentype');
 }
 
 @font-face {
     font-family: 'Pretendard';
     font-weight: bold;
-    src: url("../public/font/Pretendard_Bold.otf") format('opentype');
+    src: url("../../public/font/Pretendard_Bold.otf") format('opentype');
 }
 
 @keyframes scroll {

@@ -1,5 +1,5 @@
 import React, {ReactElement} from "react";
-import MyImage from "@/public/images/myself.webp";
+import MyImage from "../../../public/images/myself.webp";
 import Image from "next/image";
 
 export default function Introduction(): ReactElement {

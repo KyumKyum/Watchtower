@@ -9,7 +9,7 @@ export const metadata = {
   title: 'Kyum\'s Watchtower',
   description: 'A small place to record my own life.',
   icons: {
-    icon: "../public/favicon/favicon.ico"
+    icon: "../d/favicon/favicon.ico"
   }
 }
 
@@ -23,7 +23,7 @@ export default function RootLayout({
     <head>
       <base href={"http://localhost:3000/"}/>
       <title>{'Kyum\'s Watchtower'}</title>
-      <link rel='icon' href='../public/favicon/favicon.ico'/>
+      <link rel='icon' href='../../public/favicon/favicon.ico'/>
     </head>
       <body>
         <Canvas>
