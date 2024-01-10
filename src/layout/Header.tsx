@@ -11,9 +11,9 @@ export default function Header(): ReactElement {
                 <div className={"flex items-center"}>
                     <ul className="flex list-none">
                         <Link href={"/profile"} className="text-xl p-6">Profile</Link>
-                        <li className="text-xl p-6">Posts</li>
-                        <li className="text-xl p-6">Guestbook</li>
-                        <li className="text-xl p-6">Contact</li>
+                        <Link href={"/post"} className="text-xl p-6">Posts</Link>
+                        <Link href={"/guest"} className="text-xl p-6">Guestbook</Link>
+                        <Link href={'mailto:mycheesepasta@gmail.com'} className={"text-xl p-6"} rel={"noopener noreferrer"} target={"_blank"}>Contact</Link>
                     </ul>
                 </div>
             </div>
