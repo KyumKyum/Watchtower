@@ -12,8 +12,8 @@ export const cls = (...classnames: string[]) => {
 
 export const getURL = (path:string):string => {
     const baseURL = process.env.IS_PRODUCTION?
-        process.env.HOST_DEV:
-        process.env.HOST_PROD;
+        process.env.HOST_PROD:
+        process.env.HOST_DEV
 
     return new URL(path, baseURL).toString();
 }

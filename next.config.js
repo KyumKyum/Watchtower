@@ -1,5 +1,9 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+    images: {
+        loader: "default",
+        path: "/_next/image",
+    },
     webpack: (config) => {
         config.module.rules.push({
             test: /\.svg$/,

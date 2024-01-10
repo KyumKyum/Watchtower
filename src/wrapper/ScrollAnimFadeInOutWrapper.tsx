@@ -33,7 +33,7 @@ export default function ScrollAnimFadeInOutWrapper({children, fastRender}:Scroll
         return () => {
             observer.disconnect();
         }
-    },[])
+    },[fastRender])
 
     return (
         <div className={cls("transition-all duration-500",
