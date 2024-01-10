@@ -1,4 +1,5 @@
 /** @type {import('next').NextConfig} */
+
 const nextConfig = {
     images: {
         remotePatterns: [
@@ -8,7 +9,6 @@ const nextConfig = {
             }
         ],
         loader: "default",
-        path: "/_next/image",
     },
     webpack: (config) => {
         config.module.rules.push({
