@@ -11,7 +11,7 @@ export const cls = (...classnames: string[]) => {
 // }
 
 export const getURL = (path:string):string => {
-    const baseURL = process.env.IS_PRODUCTION?
+    const baseURL = (process.env.IS_PRODUCTION === 'true')?
         process.env.HOST_PROD:
         process.env.HOST_DEV
 
