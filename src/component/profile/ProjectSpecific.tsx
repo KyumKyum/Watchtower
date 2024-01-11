@@ -48,14 +48,14 @@ const ProjectSpecific: React.FC = (): ReactElement => {
                         </div>
                     </div>
                     <div className={"flex flex-row justify-center w-2/6 space-x-4"}>
-                        <Image className={"object-contain"} src={Logo} alt={'main'} priority={false}/>
+                        <Image className={"object-contain"} src={Logo} alt={'main'} priority={false} placeholder={'blur'}/>
                     </div>
                 </div>
             </ScrollAnimFadeInOutWrapper>
             <ScrollAnimFadeInOutWrapper fastRender={false}>
                 <div className={"flex flex-row w-full items-center my-4"}>
                     <div className={"flex flex-row justify-center w-2/6"}>
-                        <Image className="object-contain " src={Character} alt={'main'} priority={false}/>
+                        <Image className="object-contain " src={Character} alt={'main'} priority={false} placeholder={'blur'}/>
                     </div>
                     <div className={"flex flex-col w-4/6 space-y-2"}>
                         <div>
@@ -120,16 +120,16 @@ const ProjectSpecific: React.FC = (): ReactElement => {
                         </p>
                     </div>
                     <div className={"flex flex-col justify-center items-center w-2/6 space-y-4"}>
-                        <Image className={"object-contain"} src={Applogo} alt={'main'} priority={false}/>
-                        <Image className={"object-contain"} src={Mohey} alt={'main'} priority={false}/>
-                        <Image className={"object-contain"} src={M_app} alt={'main'} priority={false}/>
+                        <Image className={"object-contain"} src={Applogo} alt={'main'} priority={false} placeholder={'blur'}/>
+                        <Image className={"object-contain"} src={Mohey} alt={'main'} priority={false} placeholder={'blur'}/>
+                        <Image className={"object-contain"} src={M_app} alt={'main'} priority={false} placeholder={'blur'}/>
                     </div>
                 </div>
             </ScrollAnimFadeInOutWrapper>
             <ScrollAnimFadeInOutWrapper fastRender={false}>
                 <div className={"flex flex-row w-full items-center my-4"}>
                     <div className={"flex flex-row w-2/6 justify-center space-x-4"}>
-                        <Image className={"object-contain"} src={Neosk} alt={'main'} priority={false}/>
+                        <Image className={"object-contain"} src={Neosk} alt={'main'} priority={false} placeholder={'blur'}/>
                     </div>
                     <div className={"flex flex-col w-4/6 items-end my-4 space-y-2"}>
                         <div>
@@ -179,10 +179,10 @@ const ProjectSpecific: React.FC = (): ReactElement => {
                         </p>
                     </div>
                     <div className={"flex flex-col items-center w-2/6 space-y-4"}>
-                        <Image className={"object-contain"} src={Holme} alt={'main'} priority={false}/>
+                        <Image className={"object-contain"} src={Holme} alt={'main'} priority={false} placeholder={'blur'}/>
                         <div className={"flex flex-row justify-center w-full space-x-4"}>
-                            <Image className={"object-contain w-3/5"} src={LG} alt={'main'} priority={false}/>
-                            <Image className={"object-contain w-3/5"} src={SKT} alt={'main'} priority={false}/>
+                            <Image className={"object-contain w-3/5"} src={LG} alt={'main'} priority={false} placeholder={'blur'}/>
+                            <Image className={"object-contain w-3/5"} src={SKT} alt={'main'} priority={false} placeholder={'blur'}/>
                         </div>
                     </div>
                 </div>

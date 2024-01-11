@@ -10,7 +10,7 @@ import Gmail from '../../../public/static/svg/gmail.svg'
 export default function Greeting(): ReactElement {
     return (
         <div className={"flex flex-col w-full items-center"}>
-            <Image className={"object-contain w-48 h-48"} src={Jump} alt={"jump"}/>
+            <Image className={"object-contain w-48 h-48"} src={Jump} alt={"jump"} placeholder={'blur'} priority={true}/>
             <p className={"font-rocky text-5xl m-20"}>{'Lim  Kyu  Min'}</p>
             <p className={"font-mariburi font-bold text-xl"}>{'A full-stack developer who loves workout, always eager to learn new things.'}</p>
             <div className={"flex flex-row justify-center items-center my-4"}>

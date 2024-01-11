@@ -38,14 +38,14 @@ const ActivitySpecific: React.FC = (): ReactElement => {
                         </p>
                     </div>
                     <div className={"flex flex-col justify-center w-2/6"}>
-                        <Image className={"object-contain"} src={Mento} alt={'main'} priority={false}/>
+                        <Image className={"object-contain"} src={Mento} alt={'main'} priority={false} placeholder={'blur'}/>
                     </div>
                 </div>
             </ScrollAnimFadeInOutWrapper>
             <ScrollAnimFadeInOutWrapper fastRender={false}>
                 <div className={"flex flex-row w-full items-center my-4"}>
                     <div className={"flex flex-row w-2/6 space-x-4"}>
-                        <Image className={"object-contain"} src={First_Internship} alt={'main'} priority={false}/>
+                        <Image className={"object-contain"} src={First_Internship} alt={'main'} priority={false} placeholder={'blur'}/>
                     </div>
                     <div className={"flex flex-col w-4/6 items-end my-4 space-y-2"}>
                         <div>
@@ -95,7 +95,7 @@ const ActivitySpecific: React.FC = (): ReactElement => {
                         </p>
                     </div>
                     <div className={"flex flex-col justify-center w-2/6"}>
-                        <Image className={"object-contain"} src={Zkrypto} alt={'main'} priority={false}/>
+                        <Image className={"object-contain"} src={Zkrypto} alt={'main'} priority={false} placeholder={'blur'}/>
                     </div>
                 </div>
             </ScrollAnimFadeInOutWrapper>

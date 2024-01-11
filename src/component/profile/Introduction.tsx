@@ -19,7 +19,7 @@ export default function Introduction(): ReactElement {
                 </p>
             </div>
             <div className={"flex flex-row w-2/6 items-center content-center justify-center"}>
-                <Image className="object-contain " src={MyImage} alt={'main'} priority={false}/>
+                <Image className="object-contain " src={MyImage} alt={'main'} priority={false} placeholder={'blur'}/>
             </div>
         </div>
     )
