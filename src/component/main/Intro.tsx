@@ -1,6 +1,6 @@
 import React, {ReactElement} from "react";
 import Link from "next/link";
-import MainImage from "../../../public/images/photo.webp";
+import MainImage from "../../../public/static/images/photo.webp";
 import Image from "next/image";
 import {getURL} from "@/logic/utils";
 
@@ -8,7 +8,7 @@ export default function Intro(): ReactElement {
     return (
         <div className={"flex flex-row justify-end items-center w-full animate__animated animate__fadeInUp animate__delay-1s"}>
             <div className={"flex flex-row w-2/6 items-center content-center justify-center"}>
-                <Image className="object-contain w-5/6 h-5/6" src="/images/photo.webp" alt={'main'}/>
+                <Image className="object-contain w-5/6 h-5/6" src={MainImage} alt={'main'} placeholder={'blur'}/>
             </div>
             <div className={"flex flex-col w-4/6 items-end space-y-4"}>
                 <p className={'text-6xl font-bold'}>{'Lim Kyu Min (Jay Lim)'}</p>

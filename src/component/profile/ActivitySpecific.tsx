@@ -1,9 +1,9 @@
 import React, {ReactElement} from "react";
 import ScrollAnimFadeInOutWrapper from "@/wrapper/ScrollAnimFadeInOutWrapper";
 import Image from "next/image";
-import Mento from "../../../public/images/mento.webp";
-import First_Internship from "../../../public/images/sellernote.webp";
-import Zkrypto from "../../../public/images/zkrypto.webp"
+import Mento from "../../../public/static/images/mento.webp";
+import First_Internship from "../../../public/static/images/sellernote.webp";
+import Zkrypto from "../../../public/static/images/zkrypto.webp"
 
 
 const ActivitySpecific: React.FC = (): ReactElement => {

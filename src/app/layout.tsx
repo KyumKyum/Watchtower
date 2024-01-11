@@ -1,6 +1,5 @@
 import '../styles/global.css'
 import 'animate.css'
-import localFont from 'next/font/local'
 import Canvas from "@/layout/Canvas";
 
 //* Same with _app.js in previous Next.js
@@ -9,7 +8,7 @@ export const metadata = {
   title: 'Kyum\'s Watchtower',
   description: 'A small place to record my own life.',
   icons: {
-    icon: "../d/favicon/favicon.ico"
+    icon: "/public/favicon/favicon.ico"
   }
 }
 
@@ -21,9 +20,9 @@ export default function RootLayout({
   return (
     <html lang="ko">
     <head>
-      <base href={"http://localhost:3000/"}/>
+      <base href={process.env.HOST}/>
       <title>{'Kyum\'s Watchtower'}</title>
-      <link rel='icon' href='../../public/favicon/favicon.ico'/>
+      <link rel='icon' href='/favicon/favicon.ico'/>
     </head>
       <body>
         <Canvas>

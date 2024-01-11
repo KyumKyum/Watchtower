@@ -1,11 +1,11 @@
 import {ReactElement} from "react";
-import Jump from '../../../public/images/jump.webp'
+import Jump from '../../../public/static/images/jump.webp'
 import Image from "next/image";
 import Badge from "@/component/profile/Badge";
 
-import IG from '../../../public/svg/IG.svg'
-import Github from '../../../public/svg/github.svg'
-import Gmail from '../../../public/svg/gmail.svg'
+import IG from '../../../public/static/svg/IG.svg'
+import Github from '../../../public/static/svg/github.svg'
+import Gmail from '../../../public/static/svg/gmail.svg'
 
 export default function Greeting(): ReactElement {
     return (

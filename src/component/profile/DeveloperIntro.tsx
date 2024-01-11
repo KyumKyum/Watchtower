@@ -1,6 +1,6 @@
 import React, {ReactElement} from "react";
 import Link from "next/link";
-import Dev from '../../../public/svg/developer.svg'
+import Dev from '../../../public/static/svg/developer.svg'
 
 export default function DeveloperIntro(): ReactElement {
     return (
