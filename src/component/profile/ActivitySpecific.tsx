@@ -32,7 +32,7 @@ const ActivitySpecific: React.FC = (): ReactElement => {
                             <br/>{'JAVA 안드로이드 앱 개발을 가르치는 멘토 활동을 1년간 했습니다.'}
                         </p>
                         <p className={'text-sm text-start'}>
-                            {'멘토 활동을 통해 더욱 다양한 프로젝트와 해커톤을 경험하였고,'}
+                            {'멘토 활동을 통해 다양한 프로젝트와 해커톤을 경험하였고,'}
                             <br/>{'저 역시 개발자로서 더 성장할 수 있게되는'}
                             <br/>{'유익한 경험을 할 수 있게 되었습니다.'}
                         </p>
@@ -55,17 +55,17 @@ const ActivitySpecific: React.FC = (): ReactElement => {
                         <p className={'text-sm text-end'}>
                             {'저는 \'(주) 셀러노트(쉽다)\'에서 백엔드 개발자로 인턴십을 진행하였습니다.'}
                             <br/>{'친절하신 회사 분들과 많은 것을 가르쳐주셨던 CTO님 덕분에'}
-                            <br/>{'실무를 포함한 많은 개발 지식을 쌓게 된 경험이었습니다.'}
+                            <br/>{'실무를 포함한 많은 개발 지식을 쌓을 수 있었습니다.'}
                         </p>
                         <p className={'text-sm text-end'}>
                             {'해당 인턴십 기간 동안 다음 2가지의 업무를 맡았습니다.'}
                         </p>
                         <p className={'text-sm text-end'}>
-                            {'1. GoLang와 Dialogflow를 활용하여 챗봇 서비스 개발'}
+                            {'1. GoLang와 Dialogflow를 활용한 챗봇 서비스 개발'}
                             <br/>{'2. 사내 메일 서비스 도입에 관한 Typescript 기반 간단한 PoC'}
                         </p>
                         <p className={'text-sm text-end'}>
-                            {'해당 인턴십을 통해 실제 사람들이 사용하는 서비스를 개발하는 경험을 했으며,'}
+                            {'해당 인턴십으로 실제 사람들이 사용하는 서비스를 개발하는 경험을 했으며,'}
                             <br/>{'현장에서 개발 업무가 어떻게 이루어지는지 배울 수 있는 순간이었습니다.'}
                         </p>
                     </div>
@@ -79,7 +79,7 @@ const ActivitySpecific: React.FC = (): ReactElement => {
                             <p className={'text-lg text-start'}>{'학부 연구생으로서 진행한 연구 활동들'}</p>
                         </div>
                         <p className={'text-sm text-start'}>
-                            {'동기의 추천을 통해 영지식증명 (ZKP) 기술 기빈 블록체인 응용 서비스 회사인'}
+                            {'동기의 추천을 통해 영지식증명 (ZKP) 기술 기반 블록체인 응용 서비스 회사인'}
                             <br/>{'지크립토 산하 SnP 연구실에 학부 연구생으로 들어가 연구 활동을 하였습니다.'}
                         </p>
                         <p className={'text-sm text-start'}>
@@ -89,7 +89,7 @@ const ActivitySpecific: React.FC = (): ReactElement => {
                             <br/>{'이에 대한 PoC를 진행하는 활동을 하였습니다.'}
                         </p>
                         <p className={'text-sm text-start'}>
-                            {'서비스 개발자였던 제가 블록체인의 분야에도 식견을 넓히게 되는 좋은 기회였으며,'}
+                            {'웹/앱 개발자였던 제가 블록체인 분야에도 식견을 넓히게 되는 좋은 기회였으며,'}
                             <br/>{'좋으신 교수님과 연구원님들의 가르침과 다양한 지원하에'}
                             <br/>{'마음껏 공부하고 연구할 수 있었기에 즐거웠던 활동이었습니다.'}
                         </p>

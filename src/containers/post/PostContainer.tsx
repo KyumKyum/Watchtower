@@ -1,8 +1,5 @@
 import React, {ReactElement} from "react";
-import Slogan from "@/component/main/Slogan";
-import Image from "next/image";
-import AuthorImage from "../../../public/static/images/main.webp";
-import Intro from "@/component/main/Intro";
+
 
 export default function PostContainer (): ReactElement {
     return (

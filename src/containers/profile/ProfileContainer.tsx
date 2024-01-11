@@ -1,6 +1,6 @@
 
 import React, {ReactElement, useCallback, useEffect, useRef} from "react";
-import Greeting from "@/component/profile/Greeting";
+import Greeting from "@/component/main/Greeting";
 import Introduction from "@/component/profile/Introduction";
 import ScrollAnimFadeInOutWrapper from "@/wrapper/ScrollAnimFadeInOutWrapper";
 import DeveloperIntro from "@/component/profile/DeveloperIntro";
@@ -14,7 +14,7 @@ const ProfileContainer: React.FC = (): ReactElement => {
     return ( //* Fast Render for Portfolio!
         <div className={"flex flex-col items-center w-full h-full"}>
             <div className={"w-3/4 space-y-20"}>
-                {[Greeting, Introduction, DeveloperIntro, Portfolio, TechStack, TechSpecific, TMI].map((Component, index) => (
+                {[Introduction, DeveloperIntro, Portfolio, TechStack, TechSpecific, TMI].map((Component, index) => (
                     Component === Portfolio ? (
                         <Component key={index}/>
                     ) : (

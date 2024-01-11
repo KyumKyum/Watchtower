@@ -1,11 +1,11 @@
 import React, {ReactElement} from "react";
-import Dev from "../../../public/static/svg/developer.svg";
+import Idea from "../../../public/static/svg/idea.svg";
 
 export default function TMI(): ReactElement {
     return (
-        <div className={"flex flex-row justify-end items-center w-full animate__animated animate__fadeInUp animate__delay-1s"}>
+        <div className={"flex flex-row justify-end items-center w-full animate__animated animate__fadeInUp"}>
             <div className={"flex flex-row w-1/6 items-center content-center justify-center"}>
-                <Dev className={"stroke-white fill-white"}/>
+                <Idea className={"stroke-white"}/>
             </div>
             <div className={"flex flex-col w-5/6 items-end"}>
                 <p className={'text-5xl font-bold text-end'}>{'Governing Values'}</p>

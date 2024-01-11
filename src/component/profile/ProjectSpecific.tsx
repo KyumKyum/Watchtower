@@ -34,13 +34,13 @@ const ProjectSpecific: React.FC = (): ReactElement => {
                         </div>
                         <p className={'text-sm text-start'}>
                             {'저를 개발자의 길로 이끌어준 멘토 개발자 선배와 함께'}
-                            <br/>{'해커톤 프로젝트에서 개발한 앱서비스입니다.'}
+                            <br/>{'해커톤 대회에서 개발한 앱서비스입니다.'}
                             <br/>{'해당 프로젝트에서 데이터베이스를 포함한 서버 개발을 맡았습니다'}
                         </p>
                         <div>
                             <p className={'text-sm text-start'}>
-                                {'커뮤니티 기능을 비롯한 사진 업로드 기능, 랭킹 기능, SNS 소셜 로그인 기능 등'}
-                                <br/>{'일반적인 앱 서비스에서 많이 사용되는 기능을 개발을 하는 경험을 하였습니다.'}
+                                {'해커톤 이후에 실제 서비스 배포를 생각했던 만큼,'}
+                                <br/>{'실제 서비스를 목표로 구현했던 첫 프로젝트입니다.'}
                             </p>
                             <p className={'text-sm text-start'}>
                                 {'시연 영상은 '}<Link href={'https://www.youtube.com/watch?v=WgFu_LUoCO8'} rel={"noopener noreferrer"} target={"_blank"} className={"text-cyan-600"}>{'이 링크에서'}</Link>{' 확인할 수 있습니다.'}
@@ -63,18 +63,14 @@ const ProjectSpecific: React.FC = (): ReactElement => {
                             <p className={'text-lg text-end'}>{'고열량의 음식을 피하는 탄막 슈팅 게임'}</p>
                         </div>
                         <p className={'text-sm text-end'}>
-                            {'Unity 게임 엔진과 C# 언어를 활용하여 개발한'}
+                            {'Unity 게임 엔진과 C# 언어로 개발한'}
                             <br/>{'총 3개의 레벨로 구성된 탄막 슈팅 게임입니다.'}
                         </p>
                         <p className={'text-sm text-end'}>
                             {'해당 프로젝트에서 저는'}
-                            <br/>{'\'케릭터 무브먼트 & 공격\'와 \'데미지 로직\'개발을 담당하였습니다.'}
-                            <br/>{'동시에 어떻게 해야지 플레이하는 유저가 불편함보다는 재미를 느낄 수 있을까와 같은'}
+                            <br/>{'케릭터 무브먼트 & 공격과 데미지 로직 개발을 담당하였습니다.'}
+                            <br/>{'동시에 어떻게 해야지 유저가 불편함보다는 재미를 느낄 수 있을까와 같은'}
                             <br/>{'유저 입장에서의 고민을 하며 개발을 진행했었습니다.'}
-                        </p>
-                        <p className={'text-sm text-end'}>
-                            {'아무리 찾아도 당시 발표 자료를 촬영한 영상이 없어'}
-                            <br/>{'해당 게임에서 사용된 캐릭터 스프라이트 아쉬운대로 올렸습니다.'}
                         </p>
                     </div>
                 </div>
@@ -139,13 +135,11 @@ const ProjectSpecific: React.FC = (): ReactElement => {
                         <p className={'text-sm text-end'}>
                             {'네오스크 (Neosk)는 NFC 암호화 기술을 활용한 서비스로'}
                             <br/>{'현장에서 스마트폰을 사용하여 실시간으로 주문을 할 수 있는 서비스입니다.'}
-                            <br/>{'해당 서비스에서 저는 실시간 주문 처리 서버 시스템을 개발하였습니다.'}
                         </p>
                         <p className={'text-sm text-end'}>
-                            {'창업 활동 (모헤이)에서, 실시간 채팅 처리 기능을 개발하는 경험을 통해'}
-                            <br/>{'실시간 주문 처리 시스템 역시 큰 어려움 없이 개발할 수 있었고,'}
-                            <br/>{'실시간 주문 대기열 관리, 승인/거절/취소 요청에 대한 처리 로직을 개발하며'}
-                            <br/>{'실시간 서비스 개발에 대한 지식과 트래픽 처리 지식을 쌓았습니다.'}
+                            {'해당 서비스에서 저는'}
+                            <br/>{'실시간 주문 처리, 대기열 관리 및 실시간 승인/거절/취소 요청 처리를 진행하는'}
+                            <br/>{'서버 시스템을 개발하며 실시간 서비스 개발에 대한 지식과 트래픽 처리 지식을 쌓았습니다.'}
                         </p>
                     </div>
                 </div>
@@ -159,15 +153,17 @@ const ProjectSpecific: React.FC = (): ReactElement => {
                         </div>
                         <p className={'text-sm text-start'}>
                             {'한양대학교 IC-PBL 프로젝트 형 과목을 수강하며 진행한 프로젝트 입니다.'}
-                            <br/>{'LG와 SKT가 제시한 생성형 AI와 Matter 프로토콜이라는 주제로 진행이 되었으며'}
+                            <br/>{'LG와 SKT가 제시한 생성형 AI와 Matter 프로토콜이라는 주제로 진행이 되었습니다.'}
                             <br/>{'저는 이 프로젝트에서 테크 리드로서 아이디어를 구현하기 위한 아키텍쳐를 설계하고,'}
-                            <br/>{'데모 수준까지 개발하기 위해 업무 분담해주며 개발을 진행하였습니다.'}
+                            <br/>{'데모 수준까지 개발하는 업무를 맡아 진행하였습니다.'}
                         </p>
                         <p className={'text-sm text-start'}>
                             {'Holme은 MATTER 프로토콜을 기반으로 개발된 프로젝트이며,'}
                             <br/>{'기존 집의 스마트홈 환경을 어디로든, Holme인증을 받은 장소라면 옮길 수 있는,'}
                             <br/>{'"집을 옮긴다"라는 컨셉을 실체화한 서비스입니다.'}
-                            <br/>{'(더 자세한 설명은 '}
+                        </p>
+                        <p className={'text-sm text-start'}>
+                            {'(더 자세한 설명은 '}
                             <Link href={'https://flame-sun-524.notion.site/HOLME-d41cf1a8e87b4c71b638a93c58ca63f2'} rel={"noopener noreferrer"} target={"_blank"} className={"text-cyan-600"}>{'테크 블로그에서'}</Link>
                             {'와 '}
                             <Link href={'https://www.youtube.com/watch?v=R0oxNPwpq6M'} rel={"noopener noreferrer"} target={"_blank"} className={"text-cyan-600"}>{'데모&시연 영상에서'}</Link>
