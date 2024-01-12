@@ -42,6 +42,15 @@ const ProjectSpecific: React.FC = (): ReactElement => {
                                 {'해커톤 이후에 실제 서비스 배포를 생각했던 만큼,'}
                                 <br/>{'실제 서비스를 목표로 구현했던 첫 프로젝트입니다.'}
                             </p>
+                        </div>
+                        <div>
+                            <p className={'text-sm text-start'}>
+                                {'금주를 하는 입장인 제겐 꽤나 아이러니한 프로젝트이지만,'}
+                                <br/>{'저에게 유의미한 성장을 가져다 준 첫 프로젝트이니만큼'}
+                                <br/>{'자랑스럽게 포트폴리오에 적어보았습니다. XD'}
+                            </p>
+                        </div>
+                        <div>
                             <p className={'text-sm text-start'}>
                                 {'시연 영상은 '}<Link href={'https://www.youtube.com/watch?v=WgFu_LUoCO8'} rel={"noopener noreferrer"} target={"_blank"} className={"text-cyan-600"}>{'이 링크에서'}</Link>{' 확인할 수 있습니다.'}
                             </p>

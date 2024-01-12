@@ -3,6 +3,7 @@ import 'animate.css'
 import Canvas from "@/layout/Canvas";
 import MobileDetect from "mobile-detect";
 import {headers} from "next/headers";
+import {DefaultSeo} from "next-seo";
 
 //* Same with _app.js in previous Next.js
 
@@ -23,6 +24,17 @@ export default async function RootLayout({
 
   return (
     <html lang="ko">
+    <DefaultSeo
+      title={metadata.title}
+      description={metadata.description}
+      canonical={'https://watchtower-sigma.vercel.app/'}
+      openGraph={{
+        url: 'https://watchtower-sigma.vercel.app/',
+        title: metadata.title,
+        description: metadata.description,
+        site_name: metadata.title
+      }}
+    />
     <head>
       <base href={process.env.HOST}/>
       <title>{'Kyum\'s Watchtower'}</title>
