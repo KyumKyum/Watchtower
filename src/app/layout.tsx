@@ -12,6 +12,11 @@ export const metadata = {
   description: 'A small place to record my own life.',
   icons: {
     icon: "/public/favicon/favicon.ico"
+  },
+  openGraph: {
+    url: 'https://watchtower-sigma.vercel.app/',
+    title: 'Kyum\'s Watchtower',
+    description: 'A small place to record my own life.',
   }
 }
 
@@ -26,7 +31,7 @@ export default async function RootLayout({
     <html lang="ko">
     <head>
       <base href={process.env.HOST}/>
-      <title>{'Kyum\'s Watchtower'}</title>
+      <title>{metadata.title}</title>
       <link rel='icon' href='/favicon/favicon.ico'/>
     </head>
       <body>
