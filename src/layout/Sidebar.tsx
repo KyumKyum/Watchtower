@@ -11,7 +11,7 @@ const Sidebar = ({open}:OpenState):ReactElement => {
     const {setOpen} = useDrawerStateStore();
 
     return (
-        <motion.div initial={false} className={"z-10"} animate={open? "open": "closed"} variants={{
+        <motion.div  initial={false} className={"z-10"} animate={open? "open": "closed"} variants={{
             open: {
                 opacity: 1,
             },
@@ -21,6 +21,9 @@ const Sidebar = ({open}:OpenState):ReactElement => {
         }}
         transition={{
             ease: "easeInOut"
+        }}
+        style={{
+            display: open ? "block" : "none",
         }}>
             <section className={"fixed inset-y-0 right-0 top-0 h-screen w-64 bg-black"}>
                 <div className={"flex flex-col w-full h-80 items-center my-6"}>
