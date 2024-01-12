@@ -1,6 +1,8 @@
 import '../styles/global.css'
 import 'animate.css'
 import Canvas from "@/layout/Canvas";
+import MobileDetect from "mobile-detect";
+import {headers} from "next/headers";
 
 //* Same with _app.js in previous Next.js
 
@@ -12,11 +14,13 @@ export const metadata = {
   }
 }
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: {
   children: React.ReactNode
 }) {
+  const isSSRMobile = await checkSSRMobile();
+
   return (
     <html lang="ko">
     <head>
@@ -25,10 +29,20 @@ export default function RootLayout({
       <link rel='icon' href='/favicon/favicon.ico'/>
     </head>
       <body>
-        <Canvas>
+        <Canvas isSSRMobile={isSSRMobile}>
           {children}
         </Canvas>
       </body>
     </html>
   )
+}
+
+const checkSSRMobile = async () => {
+  // const md = new MobileDetect()
+  const mobileInfo: string|undefined = headers().get("user-agent")?.toString()
+  if(typeof mobileInfo === "undefined") return false
+
+  const md = new MobileDetect(mobileInfo);
+
+  return Boolean(md.mobile())
 }

@@ -8,9 +8,16 @@ import MHeader from "@/layout/MHeader";
 import MFooter from "@/layout/MFooter";
 import Sidebar from "@/layout/Sidebar";
 import useDrawerStateStore from "@/stores/drawerStateStores";
+import {DeviceContext} from "@/context/DeviceContext";
+import {cls} from "@/logic/utils";
 
-export default function Canvas({children}: React.PropsWithChildren): ReactElement {
-    const {open} = useDrawerStateStore();
+interface CanvasProps {
+    children: React.ReactNode,
+    isSSRMobile: boolean
+}
+
+export default function Canvas({children, isSSRMobile}: CanvasProps): ReactElement {
+    const {open, setOpen} = useDrawerStateStore();
 
     // const opacityTransition = useTransition(open, ({
     //     from: {opacity: 1},
@@ -18,12 +25,21 @@ export default function Canvas({children}: React.PropsWithChildren): ReactElemen
     // }))
 
     const isMobile = useMobileCheck();
+
     return (
-        <div className={"flex flex-col w-full"}>
-            {isMobile ? <MHeader/>: <Header/>}
-            {(isMobile) && <Sidebar open={open}/>}
-            <main className={"flex mx-10 w-full`"}>{children}</main>
-            {isMobile ? <MFooter/> : <Footer/>}
-        </div>
+        <>
+            <div className={cls("flex flex-col w-full",  open ? "opacity-40" : "")}
+                 onClick={() => {
+                    if(open) setOpen(!open)
+                }
+            }>
+                {(isSSRMobile || isMobile) ? <MHeader/>: <Header/>}
+                <DeviceContext.Provider value={{isSSRMobile}}>
+                    <main className={"flex mx-10"}>{children}</main>
+                </DeviceContext.Provider>
+                {(isSSRMobile || isMobile) ? <MFooter/> : <Footer/>}
+            </div>
+            {(isSSRMobile || isMobile) && <Sidebar open={open}/>}
+        </>
     )
 }

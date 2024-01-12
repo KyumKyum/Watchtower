@@ -22,7 +22,7 @@ const Sidebar = ({open}:OpenState):ReactElement => {
         transition={{
             ease: "easeInOut"
         }}>
-            <div className={"absolute inset-y-0 right-0 top-0 h-full w-64 bg-black"}>
+            <section className={"fixed inset-y-0 right-0 top-0 h-screen w-64 bg-black"}>
                 <div className={"flex flex-col w-full h-80 items-center my-6"}>
                     <Link className="text-sm p-6 font-rocky" href={"/"} onClick={() => {setOpen(false)}}>{`Kyum's Watchtower`}</Link>
                     <ul className="flex flex-col list-none">
@@ -32,7 +32,7 @@ const Sidebar = ({open}:OpenState):ReactElement => {
                         <Link href={'mailto:mycheesepasta@gmail.com'} className={"text-xl py-4"} rel={"noopener noreferrer"} target={"_blank"}>Contact</Link>
                     </ul>
                 </div>
-            </div>
+            </section>
         </motion.div>
     )
 }
