@@ -24,17 +24,6 @@ export default async function RootLayout({
 
   return (
     <html lang="ko">
-    <DefaultSeo
-      title={metadata.title}
-      description={metadata.description}
-      canonical={'https://watchtower-sigma.vercel.app/'}
-      openGraph={{
-        url: 'https://watchtower-sigma.vercel.app/',
-        title: metadata.title,
-        description: metadata.description,
-        site_name: metadata.title
-      }}
-    />
     <head>
       <base href={process.env.HOST}/>
       <title>{'Kyum\'s Watchtower'}</title>
