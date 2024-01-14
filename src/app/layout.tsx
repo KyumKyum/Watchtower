@@ -3,13 +3,13 @@ import 'animate.css'
 import Canvas from "@/layout/Canvas";
 import MobileDetect from "mobile-detect";
 import {headers} from "next/headers";
-import {DefaultSeo} from "next-seo";
 
 //* Same with _app.js in previous Next.js
 
 export const metadata = {
   title: 'Kyum\'s Watchtower',
   description: 'A small place to record my own life.',
+  metadataBase: new URL('https://watchtower-sigma.vercel.app/'),
   icons: {
     icon: "/public/favicon/favicon.ico"
   },
