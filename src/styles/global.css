@@ -38,6 +38,12 @@
     src: url("../../public/static/font/Pretendard_Bold.otf") format('opentype');
 }
 
+@font-face {
+    font-family: 'neodgm';
+    font-weight: normal;
+    src: url("../../public/static/font/neodgm.ttf") format("truetype");
+}
+
 @keyframes scroll {
     0% {
         transform: translateY(0);

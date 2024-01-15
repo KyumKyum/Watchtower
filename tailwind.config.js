@@ -9,7 +9,8 @@ module.exports = {
         mariburi: "mariburi",
         rocky: "rocky",
         D2Coding: "D2Coding",
-        Pretendard: "Pretendard"
+        Pretendard: "Pretendard",
+        neodgm: "neodgm"
       }
     },
   },
