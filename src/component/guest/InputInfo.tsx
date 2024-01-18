@@ -1,22 +1,51 @@
 import React, {ReactElement, useState} from "react";
 import useTypeWriterAnim from "@/hook/useTypeWriterAnim";
+import {hashCompare, hashValue} from "@/logic/hash";
 
 interface InputInfoProps {
-    setCurState: React.Dispatch<React.SetStateAction<number>>
+    setCurState: React.Dispatch<React.SetStateAction<number>>,
+    setCompletedUsername: React.Dispatch<React.SetStateAction<string>>,
+    setEncryptedPassword: React.Dispatch<React.SetStateAction<string>>
 }
 
-const InputInfo = ({setCurState}:InputInfoProps): ReactElement => {
-    const [num, setNum] = useState(0);
+const InputInfo = ({setCurState, setCompletedUsername, setEncryptedPassword}:InputInfoProps): ReactElement => {
+    const [username, setUsername] = useState('');
+    const [plainPassword, setPlainPassword] = useState('');
     const [invalidNicknameState, setInvalidNicknameState] = useState(false);
     const [invalidPasswordState, setInvalidPasswordState] = useState(false);
 
+    const handleUsername = (event: React.ChangeEvent<HTMLInputElement>) => {
+        const curUsername = event.target.value;
+        setUsername(curUsername);
+    }
+
+    const handlePassword = (event: React.ChangeEvent<HTMLInputElement>) => {
+        const curPlainPassword = event.target.value;
+        setPlainPassword(curPlainPassword);
+    }
+
+    const validateInput = () => {
+        //*Initialize
+        setInvalidNicknameState(false);
+        setInvalidPasswordState(false);
+        if(username.length < 1){
+            setInvalidNicknameState(true);
+        }else if(plainPassword.length < 4){
+            setInvalidPasswordState(true);
+        }else{
+            //* Push Data
+            setCompletedUsername(username);
+            setEncryptedPassword(hashValue(plainPassword,10));
+            setCurState(2);
+        }
+    }
 
     return (
         <>
             <div className={"flex flex-col h-56 px-8 py-6 space-y-2"}>
                 <p className={"text-lg font-neodgm text-green-500"}>
                     {"~ > "} <span className={"border-r-8 border-green-500"}>{useTypeWriterAnim(
-                    "   감사한 방명록을 남기고 가시는 여러분이 누구인지 살짝쿵 알려줄래요? :D ",
+                    "   방명록을 남기고 가시는 감사한 여러분이 누구인지 알려줄래요? :D ",
                     100)}
                     </span>
                 </p>
@@ -26,6 +55,8 @@ const InputInfo = ({setCurState}:InputInfoProps): ReactElement => {
                            type={'text'}
                            maxLength={20}
                            required={true}
+                           value={username}
+                           onChange={handleUsername}
                     />
                 </div>
                 <div className={"flex flex-row space-x-4"}>
@@ -34,6 +65,8 @@ const InputInfo = ({setCurState}:InputInfoProps): ReactElement => {
                            type={'password'}
                            maxLength={20}
                            required={true}
+                           value={plainPassword}
+                           onChange={handlePassword}
                     />
                 </div>
             </div>
@@ -44,18 +77,17 @@ const InputInfo = ({setCurState}:InputInfoProps): ReactElement => {
                 </div>
                 <div className={"flex flex-row space-x-8"}>
                     <button
-                        className={"flex flex-row justify-center items-center h-full bg-transparent"}
+                        className={"flex flex-row w-20 justify-center items-center h-full bg-transparent"}
                         onClick={() => setCurState(0)}
                     >
                         <p className={"text-sm font-neodgm text-green-500"}>{'뒤로가기'}</p>
                     </button>
                     <button
-                        className={"flex flex-row justify-center items-center h-full bg-transparent"}
-                        // onClick={checkIfSignValid}
+                        className={"flex flex-row w-24 justify-center items-center h-full bg-transparent"}
+                        onClick={validateInput}
                     >
                         <p className={"text-sm font-neodgm text-green-500"}>{'방명록 남기기'}</p>
                     </button>
-                    <p className={"text-sm font-neodgm text-green-500"}>{`${num} / 200`}</p>
                 </div>
             </div>
         </>

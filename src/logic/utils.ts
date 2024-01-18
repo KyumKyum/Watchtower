@@ -16,3 +16,6 @@ export const getURL = (path:string):string => {
     return new URL(path, baseURL).toString();
 }
 
+export const isValid = (value:any): boolean => {
+    return value !== null && value !== undefined && !Number.isNaN(value);
+}

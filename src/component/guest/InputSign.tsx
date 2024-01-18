@@ -9,17 +9,15 @@ interface InputSignProps {
 
 const InputSign = ({curString,setCompleteSign, setCurState}:InputSignProps): ReactElement => {
     const [sign, setSign] = useState(curString);
-    const [num, setNum] = useState(0);
     const [invalidNumState, setInvalidNumState] = useState(false);
 
     const handleSignInput = (event: React.ChangeEvent<HTMLInputElement>) => {
         const curSign = event.target.value;
         setSign(curSign);
-        setNum(curSign.length);
     }
 
     const checkIfSignValid = () => {
-        if(num < 10){
+        if(sign.length < 10){
             setInvalidNumState(true);
         }else{
             setInvalidNumState(false);
@@ -51,12 +49,12 @@ const InputSign = ({curString,setCompleteSign, setCurState}:InputSignProps): Rea
                 </div>
                 <div className={"flex flex-row space-x-8"}>
                     <button
-                        className={"flex flex-row justify-center items-center h-full bg-transparent"}
+                        className={"flex flex-row w-20 justify-center items-center h-full bg-transparent"}
                         onClick={checkIfSignValid}
                     >
-                        <p className={"text-sm font-neodgm text-green-500"}>{'방명록 남기기'}</p>
+                        <p className={"text-sm font-neodgm text-green-500"}>{'다음'}</p>
                     </button>
-                    <p className={"text-sm font-neodgm text-green-500"}>{`${num} / 200`}</p>
+                    <p className={"text-sm font-neodgm text-green-500"}>{`${sign.length} / 200`}</p>
                 </div>
             </div>
         </>
