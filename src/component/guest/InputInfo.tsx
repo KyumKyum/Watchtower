@@ -1,18 +1,30 @@
-import React, {ReactElement, useState} from "react";
+import React, {ReactElement, useEffect, useRef, useState} from "react";
 import useTypeWriterAnim from "@/hook/useTypeWriterAnim";
 import {hashCompare, hashValue} from "@/logic/hash";
+import HCaptcha from "@hcaptcha/react-hcaptcha";
 
 interface InputInfoProps {
     setCurState: React.Dispatch<React.SetStateAction<number>>,
     setCompletedUsername: React.Dispatch<React.SetStateAction<string>>,
-    setEncryptedPassword: React.Dispatch<React.SetStateAction<string>>
+    setEncryptedPassword: React.Dispatch<React.SetStateAction<string>>,
+    siteKey: string
 }
 
-const InputInfo = ({setCurState, setCompletedUsername, setEncryptedPassword}:InputInfoProps): ReactElement => {
+const InputInfo = ({setCurState, setCompletedUsername, setEncryptedPassword, siteKey}:InputInfoProps): ReactElement => {
     const [username, setUsername] = useState('');
     const [plainPassword, setPlainPassword] = useState('');
     const [invalidNicknameState, setInvalidNicknameState] = useState(false);
     const [invalidPasswordState, setInvalidPasswordState] = useState(false);
+    const [invalidUser, setInvalidUser] = useState(false);
+    const [verified, setVerified] = useState(false);
+
+    const captchaRef:React.MutableRefObject<HCaptcha|null> = useRef(null);
+
+    const onLoad = () => {
+        if(captchaRef.current){
+            captchaRef.current.execute();
+        }
+    }
 
     const handleUsername = (event: React.ChangeEvent<HTMLInputElement>) => {
         const curUsername = event.target.value;
@@ -28,10 +40,13 @@ const InputInfo = ({setCurState, setCompletedUsername, setEncryptedPassword}:Inp
         //*Initialize
         setInvalidNicknameState(false);
         setInvalidPasswordState(false);
+        setInvalidUser(false);
         if(username.length < 1){
             setInvalidNicknameState(true);
         }else if(plainPassword.length < 4){
             setInvalidPasswordState(true);
+        }else if(!verified){
+            setInvalidUser(true);
         }else{
             //* Push Data
             setCompletedUsername(username);
@@ -39,6 +54,7 @@ const InputInfo = ({setCurState, setCompletedUsername, setEncryptedPassword}:Inp
             setCurState(2);
         }
     }
+
 
     return (
         <>
@@ -69,11 +85,25 @@ const InputInfo = ({setCurState, setCompletedUsername, setEncryptedPassword}:Inp
                            onChange={handlePassword}
                     />
                 </div>
+                <div className={"flex flex-row "}>
+                    <form>
+                        <HCaptcha
+                            sitekey={siteKey}
+                            onVerify={(token, ekey) => {
+                                if(token.length > 0 && ekey.length){
+                                    setVerified(true);
+                                }
+                            }}
+                            ref={captchaRef}
+                        />
+                    </form>
+                </div>
             </div>
             <div className={"flex flex-row w-full justify-between items-center px-4 "}>
                 <div className={"flex flex-row"}>
                     {invalidNicknameState && <p className={"text-sm font-neodgm text-red-500"}>{'Error: 닉네임은 1자 이상 입력해야해요!'}</p>}
                     {invalidPasswordState && <p className={"text-sm font-neodgm text-red-500"}>{'Error: 비밀번호는 4자 이상이어야해요!'}</p>}
+                    {invalidUser && <p className={"text-sm font-neodgm text-red-500"}>{'Error: Captcha를 진행해주세요!'}</p>}
                 </div>
                 <div className={"flex flex-row space-x-8"}>
                     <button

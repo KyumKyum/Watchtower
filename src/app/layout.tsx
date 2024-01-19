@@ -30,7 +30,7 @@ export default async function RootLayout({
   return (
     <html lang="ko">
     <head>
-      <base href={process.env.HOST}/>
+      <base href={process.env.NEXT_PUBLIC_HOST}/>
       <title>{metadata.title}</title>
       <link rel='icon' href='/favicon/favicon.ico'/>
     </head>

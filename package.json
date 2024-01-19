@@ -10,6 +10,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@hcaptcha/react-hcaptcha": "^1.9.3",
     "@prisma/client": "5.8.0",
     "animate.css": "^4.1.1",
     "bcryptjs": "^2.4.3",
@@ -26,6 +27,7 @@
     "zustand": "^4.4.7"
   },
   "devDependencies": {
+    "@hcaptcha/types": "^1.0.3",
     "@svgr/webpack": "^8.1.0",
     "@types/bcryptjs": "^2.4.6",
     "@types/dotenv": "^8.2.0",

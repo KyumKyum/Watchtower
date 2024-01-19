@@ -1,6 +1,7 @@
 /** @type {import('next').NextConfig} */
 
 const nextConfig = {
+
     images: {
         formats: ['image/webp']
     },
@@ -35,7 +36,6 @@ const nextConfig = {
 
         return config;
     },
-
 }
 
 module.exports = nextConfig
