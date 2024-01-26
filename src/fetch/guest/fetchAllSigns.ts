@@ -1,10 +1,13 @@
 import {ReadSignDto, SignDto} from "@/types/dto/Sign";
 import defaultErrorHandling from "@/app/api/sign/exception/defaultErrorHandling";
+import {fetchURLBuilder} from "@/logic/utils";
+import {headers} from "next/headers";
 
 const fetchAllSigns = async (): Promise<ReadSignDto[]> => {
     try{
         //* TODO: Need to change url based on production mode.
-        const resp = await fetch('http://localhost:16253/api/sign/read', {
+
+        const resp = await fetch(fetchURLBuilder(headers().get("host"),'/api/sign/read'), {
             method: 'GET',
             headers: {
                 "Content-Type": "application/json",

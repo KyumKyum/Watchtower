@@ -1,4 +1,5 @@
 import {SVGItem} from "../../global";
+import {headers} from "next/headers";
 
 export const cls = (...classnames: string[]) => {
     return classnames.join(" "); //* All classname arrays will be converted into single string.
@@ -28,4 +29,10 @@ export const dateStringBuilder = (curDate: Date):string => {
     const min = curDate.getMinutes().toString().padStart(2,'0');
 
     return `${year}/${month}/${day} ${hr}:${min}`;
+}
+
+export const fetchURLBuilder = (host: string|null, endpoint:string):string => {
+    const protocol = (process.env.NODE_ENV === 'development') ? "http" : "https";
+
+    return  `${protocol}://${host}${endpoint}`;
 }
