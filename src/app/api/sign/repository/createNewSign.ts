@@ -17,19 +17,22 @@ const createNewSign = async (newSign: CreateSignDto):Promise<Resp> => {
         if(isValid(resp)){
             return {
                 ok: true,
-                error: null
+                error: null,
+                data: null
             };
         }else{
             return {
                 ok:false,
-                error: 'ERROR: Invalid value for resp.'
+                error: 'ERROR: Invalid value for resp.',
+                data: null
             }
         }
     }catch (error) {
         const errMsg = defaultErrorHandling(error);
         return {
             ok: false,
-            error: errMsg
+            error: errMsg,
+            data: null
         }
     }
 }

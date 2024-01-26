@@ -1,13 +1,15 @@
-'use client'
 import {ReactElement} from "react";
-import Canvas from "@/layout/Canvas";
-import ProfileContainer from "@/containers/profile/ProfileContainer";
 import GuestContainer from "@/containers/guest/GuestContainer";
+import {ReadSignDto, SignDto} from "@/types/dto/Sign";
+import fetchAllSigns from "@/fetch/guest/fetchAllSigns";
 
 
-const Profile = (): ReactElement => {
+const Profile = async (): Promise<ReactElement> => {
+    //* TODO: Make this component in serverside component
+    const signList:ReadSignDto[] = await fetchAllSigns(); // SSR Props
+
     return (
-        <GuestContainer />
+        <GuestContainer signList={signList} />
     );
 }
 

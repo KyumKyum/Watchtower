@@ -11,3 +11,11 @@ export interface CreateSignDto {
     password: string,
     content: string,
 }
+
+export interface ReadSignDto{
+    id: string,
+    guestName: string,
+    password: string,
+    content: string,
+    createdAt: string,
+}

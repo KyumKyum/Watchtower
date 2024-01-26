@@ -32,7 +32,7 @@ const InputSign = ({curString,setCompleteSign, setCurState}:InputSignProps): Rea
                 <p className={"text-lg font-neodgm text-green-500"}>
                     {"~ > "} <span className={"border-r-8 border-green-500"}>{useTypeWriterAnim(
                     "   방명록을 적는 페이지에요! 제 블로그에 오신 모든 분들이 좋은 하루를 보낼 수 있기를 :) ",
-                    100)}
+                    50)}
                     </span>
                 </p>
                 <input className={"flex w-full text-lg font-neodgm text-green-500 border-0 bg-transparent caret-green-500 outline-0"}

@@ -48,7 +48,7 @@ const InputForm:React.FC<InputFormProps> = ({siteKey}: InputFormProps):ReactElem
     return (
         <div className={"flex flex-col w-full h-72 border-green-500 border-2"}>
             <div className={"flex flex-row w-full justify-center items-center h-8 border-green-500 border-b-2"}>
-                <p className={"text-sm font-D2Coding text-green-500"}>{'Kyumericano@Blog_Watchtower-Guestbook:~'}</p>
+                <p className={"text-sm font-neodgm text-green-500"}>{'Kyumericano@Blog_Watchtower-Guestbook:~'}</p>
             </div>
             {(curState === 0) && <InputSign curString={completedSign} setCurState={setCurState} setCompleteSign={setCompletedSign}/>}
             {(curState === 1) && <InputInfo setCurState={setCurState} setCompletedUsername={setCompleteUserName} setEncryptedPassword={setEncryptedPassword} siteKey={siteKey}/>}

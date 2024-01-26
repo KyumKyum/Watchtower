@@ -1,22 +1,24 @@
-import {NextApiRequest, NextApiResponse} from "next";
 import {NextResponse} from "next/server";
-import defaultErrorHandling from "@/app/api/sign/exception/defaultErrorHandling";
 import {Resp} from "@/app/api/sign/response/resp";
 import {CreateSignDto} from "@/types/dto/Sign";
 import createNewSign from "@/app/api/sign/repository/createNewSign";
+import defaultErrorHandling from "@/app/api/sign/exception/defaultErrorHandling";
+import deleteSign from "@/app/api/sign/repository/deleteSign";
 
-export async function POST (
+export async function DELETE (
     req: Request,
 ):Promise<NextResponse<Resp>> {
     //* Sign Route - Create (api/ign/create)
     try{
-        const newSign: CreateSignDto = await req.json();
+        const deleteTgt: {
+            id: string
+        } = await req.json();
 
-        const signCreateResp = await createNewSign(newSign);
+        const deleteSignResp = await deleteSign(deleteTgt.id);
 
         return NextResponse.json({
-            ok: signCreateResp.ok,
-            error: signCreateResp.error,
+            ok: deleteSignResp.ok,
+            error: deleteSignResp.data,
             data: null
         });
     }catch (error){

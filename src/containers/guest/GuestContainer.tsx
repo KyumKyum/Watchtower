@@ -3,8 +3,15 @@
 import React, {ReactElement, useContext, useEffect, useState} from "react";
 import InputForm from "@/component/guest/InputForm";
 import ScrollAnimFadeInOutWrapper from "@/wrapper/ScrollAnimFadeInOutWrapper";
+import {ReadSignDto, SignDto} from "@/types/dto/Sign";
+import fetchAllSigns from "@/fetch/guest/fetchAllSigns";
+import SignComponent from "@/component/guest/SignComponent";
 
-export default function GuestContainer () {
+interface GuestContainerProps {
+    signList: ReadSignDto[]
+}
+
+export default function GuestContainer ({signList}:GuestContainerProps) {
     const [loading, setLoading] = useState(true);
     const [siteKey, setSiteKey] = useState('');
 
@@ -22,9 +29,9 @@ export default function GuestContainer () {
     return (
         <div className={"flex flex-col items-center w-full h-full m-14"}>
             <div className={"w-full"}>
-                <ScrollAnimFadeInOutWrapper fastRender={false}>
-                    <InputForm siteKey={siteKey}/>
-                </ScrollAnimFadeInOutWrapper>
+                <InputForm siteKey={siteKey}/>
+                <br/>
+                <SignComponent signList={signList}/>
             </div>
         </div>
     )

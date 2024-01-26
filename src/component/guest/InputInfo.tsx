@@ -62,7 +62,7 @@ const InputInfo = ({setCurState, setCompletedUsername, setEncryptedPassword, sit
                 <p className={"text-lg font-neodgm text-green-500"}>
                     {"~ > "} <span className={"border-r-8 border-green-500"}>{useTypeWriterAnim(
                     "   방명록을 남기고 가시는 감사한 여러분이 누구인지 알려줄래요? :D ",
-                    100)}
+                    50)}
                     </span>
                 </p>
                 <div className={"flex flex-row space-x-4"}>
