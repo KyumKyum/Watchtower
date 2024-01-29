@@ -1,4 +1,5 @@
 import {CreateSignDto} from "@/types/dto/Sign";
+import {RetVal} from "@/fetch/type";
 
 const createSignRequest = async (host:string, createSignDto:CreateSignDto):Promise<RetVal> => {
     try{

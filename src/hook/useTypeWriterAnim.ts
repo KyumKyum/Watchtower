@@ -13,7 +13,7 @@ const useTypeWriterAnim = (completeStr:string, delay:number): string => {
 
             return () => clearTimeout(timeout);
         }
-    }, [idx, renderedString, completeStr]);
+    }, [idx, renderedString, completeStr, delay]);
 
     return renderedString;
 }

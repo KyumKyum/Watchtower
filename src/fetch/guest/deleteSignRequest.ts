@@ -1,3 +1,5 @@
+import {RetVal} from "@/fetch/type";
+
 const deleteSignRequest = async (id: string):Promise<RetVal> => {
     try{
         const ret = await fetch(`/api/sign/delete`, {

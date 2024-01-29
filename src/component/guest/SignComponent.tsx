@@ -29,7 +29,7 @@ const LoadingComponent = ({fetch}:LoadingComponentProps) => {
         }
 
         return () => observer.disconnect();
-    },[])
+    },[fetch])
 
     return (
         <div>

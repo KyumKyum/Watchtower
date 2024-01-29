@@ -35,7 +35,7 @@ const InputForm:React.FC<InputFormProps> = ({siteKey}: InputFormProps):ReactElem
         }else if(curState === 4){
 
         }
-    },[completeUserName, completedSign, curState, encryptedPassword])
+    },[completeUserName, completedSign, curState, encryptedPassword, host])
 
     useEffect(()=>{
         if(host.length <= 0){
