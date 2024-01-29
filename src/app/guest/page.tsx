@@ -1,15 +1,20 @@
-import {ReactElement} from "react";
+'use client'
+import {ReactElement, useState} from "react";
 import GuestContainer from "@/containers/guest/GuestContainer";
 import {ReadSignDto, SignDto} from "@/types/dto/Sign";
-import fetchAllSigns from "@/fetch/guest/fetchAllSigns";
+import fetchSigns from "@/fetch/guest/fetchSigns";
+import {QueryClient} from "@tanstack/query-core";
+import {QueryClientProvider} from "@tanstack/react-query";
 
 
-const Profile = async (): Promise<ReactElement> => {
-    //* TODO: Make this component in serverside component
-    const signList:ReadSignDto[] = await fetchAllSigns(); // SSR Props
+const Profile = (): ReactElement => {
+
+    const [client] = useState(new QueryClient());
 
     return (
-        <GuestContainer signList={signList} />
+        <QueryClientProvider client={client}>
+            <GuestContainer/>
+        </QueryClientProvider>
     );
 }
 

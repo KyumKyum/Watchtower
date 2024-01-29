@@ -3,12 +3,23 @@ import defaultErrorHandling from "@/app/api/sign/exception/defaultErrorHandling"
 import {Resp} from "@/app/api/sign/response/resp";
 import readSigns from "@/app/api/sign/repository/readSigns";
 import {SignDto} from "@/types/dto/Sign";
+import {NextApiRequest} from "next";
 
 export async function GET (
-    req: Request,
+    req: NextApiRequest,
 ):Promise<NextResponse<Resp>>{
     try {
-        const fetchResp = await readSigns();
+        if(!req.url){
+            return NextResponse.json({
+                ok: false,
+                error: 'URL Param Not Provided',
+                data: null
+            });
+        }
+        const url = new URL(req.url);
+        const lastId = url.searchParams.get('lastId');
+
+        const fetchResp = await readSigns(lastId);
 
         if(!fetchResp.ok){
             return NextResponse.json({
