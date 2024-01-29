@@ -5,6 +5,7 @@
   "scripts": {
     "dev": "next dev -p 16253",
     "clean": "rm -d -r .next",
+    "postinstall": "prisma generate",
     "build": "prisma generate && prisma deploy && next build",
     "start": "next start",
     "lint": "next lint"
