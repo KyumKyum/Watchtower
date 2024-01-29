@@ -35,8 +35,6 @@ const fetchSigns = async (pageParam: unknown):Promise<SignList>=> {
 
         if(!parsedData.ok){
             console.log(parsedData.error);
-            //TODO: Need to add error handling mech
-            //alert(`ERROR! ${parsedData.error}`);
             return {
                 ok: false,
                 data: []

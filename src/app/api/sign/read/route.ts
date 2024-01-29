@@ -6,7 +6,7 @@ import {SignDto} from "@/types/dto/Sign";
 import {NextApiRequest} from "next";
 
 export async function GET (
-    req: NextApiRequest,
+    req: Request,
 ):Promise<NextResponse<Resp>>{
     try {
         if(!req.url){

@@ -17,7 +17,7 @@ const InputSign = ({curString,setCompleteSign, setCurState}:InputSignProps): Rea
     }
 
     const checkIfSignValid = () => {
-        if(sign.length < 10){
+        if(sign.length < 5){
             setInvalidNumState(true);
         }else{
             setInvalidNumState(false);
@@ -45,7 +45,7 @@ const InputSign = ({curString,setCompleteSign, setCurState}:InputSignProps): Rea
             </div>
             <div className={"flex flex-row w-full justify-between items-center px-4 "}>
                 <div className={"flex flex-row"}>
-                    {invalidNumState && <p className={"text-sm font-neodgm text-red-500"}>{'Error: 최소 10자 이상 입력해야합니다!'}</p>}
+                    {invalidNumState && <p className={"text-sm font-neodgm text-red-500"}>{'Error: 최소 5자 이상 입력해주세요!'}</p>}
                 </div>
                 <div className={"flex flex-row space-x-8"}>
                     <button
